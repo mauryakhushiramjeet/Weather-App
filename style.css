@@ -9,9 +9,9 @@ body{
 
 }
 .card{
-    width: 90%;
+    width: 35rem;
     background:linear-gradient(135deg,#41C9E2,#00224d);
-    max-width: 470px;
+    /* max-width: 470px; */
     /* max-height: 470px; */
     margin: 100px auto 0 ;
     border-radius: 20px;
@@ -27,19 +27,19 @@ body{
     /* border:2px solid yellow */
 }
 .search input{
-border: 0;
-outline: 0;
+/* border: 2px solid red; */
+outline: none;
 color: #555;
 background: #ebfffc;
 /* background-color: ; */
 height: 60px;
-flex: 1;
+/* flex: 1; */
 border-radius: 30px;
 margin-right: 16px;
 font-size: 18px;
 padding: 10px 35px;
 text-transform:capitalize;
-
+width: 80%;
 
 }
 .search button{
@@ -47,8 +47,8 @@ text-transform:capitalize;
 outline: 0;
 background: #ebfffc;
 border-radius: 50%;
-width: 60px;
-height: 60px;
+width: 15%;
+height: 3.5rem;
 cursor: pointer;
 }
 .search button img{
@@ -56,17 +56,18 @@ cursor: pointer;
 }
 .weather-icon{
     width: 170px;
+    height: 200px;
     margin-top: 30px;
     /* border: 2px solid red; */
 
 }
 .weather h1{
-    font-size: 80px;
+    font-size: 5rem;
     font-weight: 500;
 
 }
 .weather h2{
-    font-size: 45px;
+    font-size: 4rem;
     font-weight: 300;
     margin-top: -10px;
     
@@ -90,6 +91,96 @@ cursor: pointer;
     margin-right: 11px;
 }
 .humidity,.wind{
-    font-size: 25px;
+    font-size: 3rem;
 }
 /* https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key} */
+
+/* Our Media Querri starts from here  */
+@media  (max-width:570px) {
+    .card{
+        width: 25rem;
+    }
+    .search input{
+        font-size: 15px;
+    }
+    .weather h1{
+        font-size: 3rem;
+    }
+    .weather h2{
+        font-size: 2rem;
+    }
+    .humidity,.wind{
+        font-size: 2rem;
+    }
+    .weather-icon{
+        width: 140px;
+        height: 150px;
+        margin-top: 20px;
+        /* border: 2px solid red; */
+    
+    }
+}
+@media  (max-width:410px) {
+    .card{
+        width: 20rem;
+    }
+    .weather h1{
+        font-size: 2rem;
+    }
+    .weather h2{
+        font-size: 1.5rem;
+    }
+    .humidity,.wind{
+        font-size: 1rem;
+    }
+    .search input{
+        font-size: 12px;
+    }
+    .weather-icon{
+        width: 120px;
+        height: 120px;
+        margin-top: 30px;
+        /* border: 2px solid red; */
+    
+    }
+}
+@media  (max-width:320px) {
+    .card{
+        width: 15rem;
+    }
+    .weather h1{
+        font-size: 1.7rem;
+    }
+    .weather h2{
+        font-size: 1.2rem;
+    }
+    .humidity,.wind{
+        font-size: .7rem;
+    }
+    .search input{
+        height: 40px;
+        font-size: 9px;
+        padding: 3px 2px;
+    }
+    .search button{
+        width: 20%;
+        height: 2.5rem;
+    }
+    .weather-icon{
+        width: 100px;
+        height: 100px;
+        margin-top: 30px;
+        /* border: 2px solid red; */
+    
+    }
+    .col img{
+        width: 30px;
+        margin-right: 7px;
+        padding: 5px;
+    }
+    .col p{
+        font-size: .72rem;
+        /* padding: 5px; */
+    }
+    
+}
